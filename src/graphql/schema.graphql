@@ -1,0 +1,26 @@
+type Query {
+    Users: [User!]!
+    User(name: String!): [User!]!
+}
+type Mutation {
+    CreateUser(
+        name: String!
+        phoneNo: String!
+        password: String!
+        address: String!
+    ): Boolean!
+    UpdateUserName(
+        name: String!
+        phoneNo: String
+        password: String
+        address: String
+    ): Boolean!
+}
+
+type User {
+    id: String!
+    name: String!
+    phoneNumber: String!
+    address: String!
+    password: String!
+}
